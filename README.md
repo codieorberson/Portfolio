@@ -1,4 +1,4 @@
-# Portfolio
+## Portfolio
 
 This personal website serves as a comprehensive digital showcase of my professional journey. From an intuitive 'About' section that narrates my passions and interests, to a detailed 'Skills' segment highlighting my technical proficiencies, every corner of the site tells a part of my story. The 'Projects' area delves deep into the works I'm most proud of, and the 'CV' section provides a concise overview of my career trajectory. For those wishing to connect or collaborate, the 'Contact' section makes reaching out a breeze. An all-in-one platform that encapsulates the essence of my professional identity.
 
