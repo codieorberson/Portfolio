@@ -1,0 +1,126 @@
+
+.cv-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  border-bottom: 3px solid #000;
+}
+
+h1 {
+  font-size: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: teal;
+}
+
+h2{
+  color:teal;
+  font-size: 40px;
+  margin-left: -25px;
+  margin-bottom: 25px;
+}
+
+h3{
+  font-size: 25px;
+  color:black;
+  margin: 0 1rem 0.5rem 0;
+  font-weight: bold;
+}
+
+p{
+  font-size: 20px;
+}
+.cv-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
+
+.column::before {
+  content: "";
+  position: absolute;
+  left: 11.5px;
+  top: 5.2em;
+  bottom: 0;
+  width: 1.5px;
+  background-color: teal;
+  z-index: 0;
+}
+
+.column {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.dot {
+  position: absolute;
+  left: -25px;  // Adjust this value to place the dot next to the h3
+  top: calc(1.6em / 2);  // Roughly half the height of an h3
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid teal;
+  z-index: 2;
+}
+
+
+.hobbies-column {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.hobby-item {
+  margin-bottom: 1rem;
+}
+
+.year {
+  background-color: lightcyan;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.details-toggle{
+  background-color: #97b7dd;
+  padding: 5px 10px;
+  border-radius: 50px;
+  margin-left: 10px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.details-content ul li {
+  max-width: 425px;  // you can adjust this value based on your preference
+  word-wrap: break-word;
+  font-size: 20px;
+}
+
+.hobby-item ul li{
+  font-size: 20px;
+  border: 10px;
+}
+
+.details-content{
+  border-radius: 15px;
+
+  background-color: #a8c3e3;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.hobby-header {
+  display: flex;
+  align-items: center;  /* This will vertically center the items in case they have different heights */
+  gap: 10px;  /* Provides spacing between the icon and the heading */
+}

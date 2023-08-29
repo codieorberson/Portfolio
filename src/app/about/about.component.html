@@ -1,0 +1,50 @@
+<div class="about-container">
+  <h1><b>About</b></h1>
+
+  <div class="content-container" >
+    <div class="profile-section" [@slideInTop]="isVisible ? '*' : 'void'">
+      <div class="profile-picture">
+        <img src="/assets/images/lasvegas.jpg" alt="Codie Orberson" />
+      </div>
+
+      <div class="social-icons">
+        <a href="https://github.com/codieorberson" target="_blank" rel="noopener noreferrer">
+          <img class="icon" src="/assets/icons/github.png" alt="GitHub">
+        </a>
+        <a href="https://linkedin.com/in/codie-orberson" target="_blank" rel="noopener noreferrer">
+          <img class="icon"src="/assets/icons/linkedin.png" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+
+    <div class="description-section" [@slideInBottom]="isVisible ? '*' : 'void'">
+      <h2>Full Stack Developer</h2>
+      <p>
+        I'm a Full Stack developer specialized in .Net, SQL Server, Angular, and Azure.
+        Drawing from my substantial experience in the healthcare sector,
+        I excel at addressing technical challenges with precision.
+        My ambition is to use my technical expertise to drive improvements in specific industries.
+        I'm actively seeking a role in an innovative company to deploy impactful solutions for customers.
+      </p>
+
+    <div class="info-section">
+      <div class="info-item">
+        <mat-icon>location_on</mat-icon>
+        <span>Sauit Louis, MO</span>
+      </div>
+      <div class="info-item">
+        <mat-icon>cake</mat-icon>
+        <span>26</span>
+      </div>
+      <!-- <div class="info-item">
+        <mat-icon>mail_outline</mat-icon>
+        <span>codie.orberson@gmail.com</span>
+      </div>
+
+      <div class="info-item">
+        <mat-icon>school</mat-icon>
+        <span>Bachelor's degree</span>
+      </div> -->
+    </div>
+  </div>
+</div>

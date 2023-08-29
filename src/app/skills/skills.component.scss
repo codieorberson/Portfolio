@@ -1,0 +1,55 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  grid-gap: 16px;
+  width: 100%;
+}
+
+mat-card {
+  width: 100%;
+  box-shadow: none !important;
+  padding: 40px;
+}
+mat-card-title{
+  padding-bottom: 10px;
+  font-size: 40px;
+  text-align: center;
+  color: teal;
+}
+
+
+.skills-container {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid #000;
+
+}
+
+h1 {
+  font-size: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  color: teal;
+}
+
+.progress-container {
+  position: relative;
+  padding: 10px;
+  font-size: 75px;
+}
+
+.progress-with-number {
+  position: relative;
+}
+.progress-container p {
+  font-size: 1.5rem; /* Adjust as per your preference */
+}
+.progress-number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  transform: translate(0, -100%);  /* This will move the number up */
+}
