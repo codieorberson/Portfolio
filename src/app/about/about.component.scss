@@ -3,7 +3,7 @@
 .profile-picture img {
     width: 100%;
     max-width: 250px;
-    border-radius: 50%;  // Circular image
+    border-radius: 50%;
 }
 
 .about-container {
@@ -20,28 +20,42 @@ h1 {
   color: teal;
 }
 
+
+// h1 {
+//   font-size: 50px;
+//   padding-bottom: 50px;
+//   text-align: center;
+//   color: teal;
+//   text-decoration-line: underline;
+//   text-decoration-color: transparent;
+//   background-image: linear-gradient(to right, black 25%, black 75%);
+//   background-repeat: no-repeat;
+//   background-position: 0% 100%l
+//   background-size: 100% 2px;
+// }
+
 .content-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;  /* Adjust the gap as needed */
-  width: 60%; /* Adjust this percentage to what works best for your design */
-  margin: 0 auto; /* This will center the content-container */
+  gap: 1rem;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .profile-section {
   grid-column: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;  /* Horizontally center */
-  justify-content: center; /* Vertically center */
+  align-items: center;
+  justify-content: center;
 }
 
 .description-section {
   display: flex;
   grid-column: 2;
   flex-direction: column;
-  align-items: center;  /* Horizontally center */
-  justify-content: center; /* Vertically center */
+  align-items: center;
+  justify-content: center;
 }
 
 .info-section {
@@ -56,12 +70,12 @@ h1 {
 .info-item {
   display: flex;
   flex-direction: column;
-  align-items: center;  /* Horizontally center within each item */
-  text-align: center;   /* Center the text for each info-item */
+  align-items: center;
+  text-align: center;
   margin-bottom: 10px;
 }
 .info-section {
-  gap: 1.5rem; /* Increase the gap a bit if needed */
+  gap: 1.5rem;
   padding: 30px;
 }
 .info-item span {
@@ -84,8 +98,8 @@ mat-icon{
 
 .social-icons {
   display: flex;
-  justify-content: center;  /* Horizontally center */
-  margin-top: 1rem; /* Optional: Add some space between profile picture and social icons */
+  justify-content: center;
+  margin-top: 1rem;
 }
 h2 {
   font-size: 40px;

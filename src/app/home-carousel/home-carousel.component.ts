@@ -23,7 +23,7 @@ export class HomeCarouselComponent implements OnInit {
   ngOnInit() {
     setInterval(() => {
       this.currentPictureIndex = (this.currentPictureIndex + 1) % this.images.length;
-    }, 5000);
+    }, 3000);
     this.type();
   }
 
@@ -31,10 +31,10 @@ export class HomeCarouselComponent implements OnInit {
     const currentWord = this.titles[this.currentWordIndex];
     if (this.isDeleting) {
       this.currentTitle = currentWord.substring(0, this.typingIndex - 1);
-      this.typingIndex--;  // Decrement the typingIndex
+      this.typingIndex--;
     } else {
       this.currentTitle = currentWord.substring(0, this.typingIndex + 1);
-      this.typingIndex++;  // Increment the typingIndex
+      this.typingIndex++;
     }
 
     if (!this.isDeleting && this.typingIndex === currentWord.length) {
@@ -46,7 +46,7 @@ export class HomeCarouselComponent implements OnInit {
       this.currentWordIndex = (this.currentWordIndex + 1) % this.titles.length;
     }
 
-    const typingSpeed = this.isDeleting ? 100 : 200; // Speed up if deleting
+    const typingSpeed = this.isDeleting ? 100 : 200;
     setTimeout(() => this.type(), typingSpeed);
 }
 

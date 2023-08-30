@@ -1,9 +1,9 @@
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(3, 400px);  /* 3 columns each with 400px width */
+  grid-template-columns: repeat(3, 400px);
   grid-gap: 50px;
   border-bottom: 3px solid #000;
-  justify-content: center;  /* This centers the grid items horizontally */
+  justify-content: center;
   padding-bottom: 30px;
 }
 
@@ -13,14 +13,9 @@
   max-height: 1000px;
 }
 
-/* ... Rest of your CSS remains unchanged ... */
-
-
 mat-card-actions {
   margin-top: auto;
 }
-
-
 
 h1 {
   padding-top: 2rem;
@@ -75,7 +70,11 @@ h1 {
 
 .project-card .show-description p {
   opacity: 1;
-  max-height: 200px;
+  max-height: 300px;
+  background-color: #97b7dd;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: inline-block;
 }
 
 .year {

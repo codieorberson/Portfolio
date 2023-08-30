@@ -28,11 +28,11 @@
 }
 
 a {
-  text-decoration: none;   /* Removes the underline */
-  color: black;            /* Sets font color to black */
-  transition: 0.3s;        /* Smooth color transition on hover */
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
 }
 
 a:hover {
-  color: teal;             /* Slightly lighter shade when hovering over */
+  color: teal;
 }
