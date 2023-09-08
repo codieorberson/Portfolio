@@ -100,6 +100,10 @@ p{
   font-size: 20px;
 }
 
+.details-toggle:hover{
+  transform: scale(1.05);
+}
+
 .details-content ul li {
   max-width: 425px;
   word-wrap: break-word;
@@ -117,6 +121,11 @@ p{
   background-color: #a8c3e3;
   padding-top: 10px;
   padding-bottom: 5px;
+  margin: 10px;
+}
+
+.details-content:hover{
+  transform: scale(1.02);
 }
 
 .hobby-header {
