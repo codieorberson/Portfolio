@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+text {
+  transition: font-size 0.3s ease-in-out;
+}
+
+
+// .enlarged-text {
+//   font-size: 105%;
+//   stroke: black;
+//   stroke-width: 0.5px;
+//   font-weight: bold;
+// }
+

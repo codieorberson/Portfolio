@@ -19,6 +19,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { CvComponent } from './cv/cv.component';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { SkillsCollageComponent } from './skills-collage/skills-collage.component';
+import { WordCloudComponent } from './word-cloud/word-cloud.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     SideProjectsComponent,
     HomeCarouselComponent,
     CvComponent,
-    ImageDialogComponent
+    ImageDialogComponent,
+    SkillsCollageComponent,
+    WordCloudComponent
   ],
   imports: [
     BrowserModule,
