@@ -74,8 +74,7 @@ export class WordCloudComponent implements OnInit, OnDestroy {
             .style('font-size', `${d.size * 1.05}px`)
             .style('font-weight', 'bold')
             .style('stroke', 'black')
-            .style('stroke-width', '0.5px')
-            .style('cursor', 'pointer');
+            .style('stroke-width', '0.5px');
 
     })
     .on('mouseout', (event: { currentTarget: any; }, d: SkillWord) => {
