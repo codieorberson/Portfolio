@@ -21,6 +21,8 @@ import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { SkillsCollageComponent } from './skills-collage/skills-collage.component';
 import { WordCloudComponent } from './word-cloud/word-cloud.component';
+import { MovingWordsComponent } from './moving-words/moving-words.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { WordCloudComponent } from './word-cloud/word-cloud.component';
     CvComponent,
     ImageDialogComponent,
     SkillsCollageComponent,
-    WordCloudComponent
+    WordCloudComponent,
+    MovingWordsComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { WordCloudComponent } from './word-cloud/word-cloud.component';
     MatIconModule,
     MatCardModule,
     MatProgressBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

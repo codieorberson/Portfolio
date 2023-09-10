@@ -1,61 +1,23 @@
-<div class="skills-container">
+<div class="skills-container" id="uniqueSkillsContainer">
   <h1><b>Skills</b></h1>
-
   <div class="grid-container">
-
-    <!-- Languages Card -->
-    <mat-card [@slideInLeft]="isVisible ? '*' : 'void'">
-    <mat-card-title>Languages</mat-card-title>
-    <mat-card-content>
-      <div *ngFor="let language of languages" class="progress-container">
-        <p>{{language.name}}</p>
-        <div class="progress-with-number">
-            <mat-progress-bar [value]="language.progress"></mat-progress-bar>
-            <span class="progress-number">{{language.progress}}%</span>
+    <mat-card *ngFor="let skillCategory of allSkills; let i = index" [@slideIn]="getAnimationState(i)">
+      <mat-card-title>{{skillCategory.name}}</mat-card-title>
+      <mat-card-content>
+        <div *ngFor="let skill of skillCategory.skills" class="progress-container">
+          <p>
+            {{skill.name}}
+            <span matTooltip={{skill.details}} matTooltipPosition="right" class="info-icon"    matTooltipClass="skills-tooltip">
+              i
+            </span>
+          </p>
+          <div class="progress-with-number">
+            <mat-progress-bar [value]="skill.progress"></mat-progress-bar>
+            <span class="progress-number">{{skill.progress}}%</span>
+          </div>
         </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card [@slideInRight]="isVisible ? '*' : 'void'">
-    <mat-card-title>Tools</mat-card-title>
-    <mat-card-content>
-      <div *ngFor="let tool of tools" class="progress-container">
-        <p>{{tool.name}}</p>
-        <div class="progress-with-number">
-            <mat-progress-bar [value]="tool.progress"></mat-progress-bar>
-            <span class="progress-number">{{tool.progress}}%</span>
-        </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card [@slideInLeft]="isVisible ? '*' : 'void'">
-    <mat-card-title>Hosting Servers</mat-card-title>
-    <mat-card-content>
-      <div *ngFor="let server of servers" class="progress-container">
-        <p>{{server.name}}</p>
-        <div class="progress-with-number">
-            <mat-progress-bar [value]="server.progress"></mat-progress-bar>
-            <span class="progress-number">{{server.progress}}%</span>
-        </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card [@slideInRight]="isVisible ? '*' : 'void'">
-    <mat-card-title>Database</mat-card-title>
-    <mat-card-content>
-      <div *ngFor="let database of databases" class="progress-container">
-        <p>{{database.name}}</p>
-        <div class="progress-with-number">
-            <mat-progress-bar [value]="database.progress"></mat-progress-bar>
-            <span class="progress-number">{{database.progress}}%</span>
-        </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
-
+      </mat-card-content>
+    </mat-card>
   </div>
+  <app-word-cloud [skillsData]="flattenedSkills"></app-word-cloud>
 </div>
-

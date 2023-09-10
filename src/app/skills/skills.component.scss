@@ -5,6 +5,7 @@
   width: 100%;
 }
 
+
 mat-card {
   width: 100%;
   box-shadow: none !important;
@@ -52,4 +53,28 @@ h1 {
   right: 0;
   font-size: 20px;
   transform: translate(0, -100%);
+}
+
+.info-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #97b7dd;
+  color: black; // Text color
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: normal !important;
+}
+
+.info-icon:hover{
+  background-color: teal;
+  transform: scale(1.15);
+}
+
+p{
+  font-weight: bold;
 }

@@ -1,12 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component({
-  selector: 'app-skills-collage',
-  templateUrl: './skills-collage.component.html',
-  styleUrls: ['./skills-collage.component.scss']
-})
-export class SkillsCollageComponent implements OnInit {
 
+@Component({
+  selector: 'app-moving-words',
+  templateUrl: './moving-words.component.html',
+  styleUrls: ['./moving-words.component.scss']
+})
+export class MovingWordsComponent implements OnInit {
+
+
+  constructor() {}
+
+  ngOnInit(): void {}
+  Math = Math;
   languages = [
     { name: '.NET', progress: 95 },
     { name: 'Angular', progress: 90 },
@@ -47,24 +53,4 @@ export class SkillsCollageComponent implements OnInit {
     { name: 'Servers', skills: this.servers, color: '#03A9F4' },
     { name: 'Databases', skills: this.databases, color: '#9C27B0' }
   ];
-
-  get flattenedSkills() {
-    let all: { text: string; size: number; color: string; }[] = [];
-    this.allSkills.forEach(category => {
-      category.skills.forEach(skill => {
-        all.push({
-          text: skill.name,
-          size: skill.progress,
-          color: category.color
-        });
-      });
-    });
-    return all;
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
