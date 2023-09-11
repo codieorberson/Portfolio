@@ -1,10 +1,10 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <div class="chat-button-container" *ngIf="isChatBoxMinimized">
-  <button (click)="toggleChatBox()" class="toggle-button">{{'Maximize Chat'}}</button>
+  <button (click)="toggleChatBox()" class="toggle-button">{{'Maximize Chat (WIP)'}}</button>
 </div>
 <div class="chat-container" *ngIf="!isChatBoxMinimized">
-  <button (click)="toggleChatBox()" class="toggle-button">{{'Minimize Chat'}}</button>
+  <button (click)="toggleChatBox()" class="toggle-button">{{'Minimize Chat (WIP)'}}</button>
 
   <div class="message-thread" #messageContainer>
     <div *ngFor="let message of messages; let i = index" class="message-container" [ngClass]="getMessageClasses(message)">

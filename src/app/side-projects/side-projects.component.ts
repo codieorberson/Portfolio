@@ -77,7 +77,7 @@ export class SideProjectsComponent {
       name: "Chat-GPT 3.5 Interactive Assistant",
       imageUrl: "/assets/images/chatgpt.jpg",
       technologies: ["Python Flask", "OpenAi"],
-      sourceCodeLink: "https://github.com/codieorberson/ChatGpt",
+      sourceCodeLink: "https://github.com/codieorberson/ChatGpt-Showcase",
       showDescription: false,
       detailsButtonText: "+ Details",
       year: "2023",
