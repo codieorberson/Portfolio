@@ -3,6 +3,7 @@
   <div class="grid-container">
     <mat-card *ngFor="let skillCategory of allSkills; let i = index" [@slideIn]="getAnimationState(i)">
       <mat-card-title>{{skillCategory.name}}</mat-card-title>
+
       <mat-card-content>
         <div *ngFor="let skill of skillCategory.skills" class="progress-container">
           <p>
@@ -10,6 +11,9 @@
             <span matTooltip={{skill.details}} matTooltipPosition="right" class="info-icon"    matTooltipClass="skills-tooltip">
               i
             </span>
+            <span class="experience-span">({{skill.yearsExperience}}+ years)</span>
+
+
           </p>
           <div class="progress-with-number">
             <mat-progress-bar [value]="skill.progress"></mat-progress-bar>
