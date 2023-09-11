@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,9 +20,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { CvComponent } from './cv/cv.component';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { SkillsCollageComponent } from './skills-collage/skills-collage.component';
 import { WordCloudComponent } from './word-cloud/word-cloud.component';
-import { MovingWordsComponent } from './moving-words/moving-words.component';
+import { ChatDialogComponent } from './chat-dialog/chat-dialog.component';
+import { FormsModule } from '@angular/forms';
+
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
@@ -38,9 +40,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     HomeCarouselComponent,
     CvComponent,
     ImageDialogComponent,
-    SkillsCollageComponent,
     WordCloudComponent,
-    MovingWordsComponent
+    ChatDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +51,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatCardModule,
     MatProgressBarModule,
     MatDialogModule,
-    MatTooltipModule
+    MatTooltipModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
