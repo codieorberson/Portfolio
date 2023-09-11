@@ -19,16 +19,16 @@
 
   <div class="input-container">
     <div class="column">
-      <div class="row">
+      <div class="row loadingIndicator">
         <textarea [(ngModel)]="inputMessage" class="message-input" #inputMessageTextArea
           placeholder="Curious about Codie's portfolio? Type your question here..." (keyup.enter)="sendMessage()"
           (input)="adjustTextareaHeight($event)">
         </textarea>
+        <div *ngIf="isLoading" class="spinner"></div>
       </div>
-
       <div class="row">
-        <button (click)="sendMessage()" class="send-button">Send</button>
-        <button (click)="clearMessages()" class="clear-button">Clear</button>
+        <button (click)="sendMessage()" class="send-button" [disabled]="isLoading">Send</button>
+        <button (click)="clearMessages()" class="clear-button" [disabled]="isLoading">Clear</button>
       </div>
   </div>
   </div>

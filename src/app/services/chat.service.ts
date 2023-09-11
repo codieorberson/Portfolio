@@ -10,7 +10,7 @@ export class ChatService {
 
   get status(): boolean {
     const storedMessages = sessionStorage.getItem(this.chatStatusKey);
-    return storedMessages ? JSON.parse(storedMessages) : false;
+    return storedMessages ? JSON.parse(storedMessages) : true;
   }
 
   set status(value: boolean) {

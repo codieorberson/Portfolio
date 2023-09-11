@@ -14,8 +14,9 @@ export class ChatDialogComponent implements OnInit, OnDestroy {
   @ViewChild('inputMessageTextArea') textareaElement!: ElementRef;
   messages: Message[] = [];
   inputMessage: string = '';
+  isLoading: boolean = false;
 
-  isChatBoxMinimized = false;
+  isChatBoxMinimized = true;
   messagesSubscription: Subscription | undefined;
 
   constructor(private chatgpt: ChatGptService, private chatService: ChatService, private elementRef: ElementRef) { }
@@ -97,11 +98,16 @@ export class ChatDialogComponent implements OnInit, OnDestroy {
       setTimeout(() => {
         this.adjustTextareaHeight({ target: this.textareaElement.nativeElement });
       }, 0);
+
+      this.isLoading = true;
       this.chatgpt.GetAnswer(question).subscribe((response) => {
         const contentMessage = response.message.choices[0].message.content;
         console.log(contentMessage)
-        this.addMessages(contentMessage, true)
+        this.addMessages(contentMessage, true);
+
+        this.isLoading = false;
       });
+
     }
   }
 }
