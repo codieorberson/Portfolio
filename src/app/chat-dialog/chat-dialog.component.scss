@@ -87,6 +87,17 @@
   font-size: 16px;
 }
 
+.send-button:hover{
+  font-weight: bold;
+  color: black;
+}
+
+
+.clear-button:hover{
+  font-weight: bold;
+  color: black;
+}
+
 .toggle-button {
   padding: 5px;
   background-color: rgb(51, 59, 61);
@@ -98,6 +109,11 @@
   width: 800px;
   font-size: 18px;
   height:35px
+}
+
+.toggle-button:hover{
+  font-weight: bold;
+  color: teal;
 }
 
 .chat-button-container {
@@ -114,6 +130,12 @@
   word-wrap: break-word;
   overflow-x: auto;
   font-size: 18px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.message-text::-webkit-scrollbar {
+  width: 0px;
 }
 
 .message-container {
