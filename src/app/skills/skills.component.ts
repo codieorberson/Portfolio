@@ -84,7 +84,7 @@ export class SkillsComponent {
     { name: 'Soap UI', yearsExperience: 3, progress: 90, details: 'Skilled in utilizing Soap UI for SQL Server performance diagnosis and event analysis.' },
     { name: 'REST / SOAP', yearsExperience: 5, progress: 90, details: 'Developed both RESTful and SOAP APIs with tools including Postman and Insomnia.' },
     { name: 'Swagger', yearsExperience: 3, progress: 90, details: 'Experienced in using Swagger for API specification, documentation generation, and SDK development.' },
-    { name: 'Blazor', yearsExperience: 3,  progress: 80, details: 'Adept at using Blazor for CI/CD, build pipeline management, and automation tasks.' },
+    { name: 'Blazor', yearsExperience: 1.5,  progress: 75, details: 'Adept at using Blazor for CI/CD, build pipeline management, and automation tasks.' },
   ];
 
   unitTesting = [

@@ -21,7 +21,7 @@
     <div class="column">
       <div class="row loadingIndicator">
         <textarea [(ngModel)]="inputMessage" class="message-input" #inputMessageTextArea
-          placeholder="Curious about Codie's portfolio? Type your question here..." (keyup.enter)="sendMessage()"
+          placeholder="Eager to explore Codie's professional journey? Type your question here..." (keyup.enter)="sendMessage()"
           (input)="adjustTextareaHeight($event)">
         </textarea>
         <div *ngIf="isLoading" class="spinner"></div>

@@ -67,6 +67,7 @@
   resize: none;
 }
 
+
 .send-button {
   padding: 8px 16px;
   background-color: teal;
@@ -147,8 +148,17 @@
   top: 0;
   right: 0;
   color: rgb(51, 59, 61);
+  background-color: lightgrey;
+  border-radius: 8px;
 }
 
+.clipboard-button:hover{
+  color: teal;
+}
+
+mat-icon {
+  margin-top: 4px;
+}
 .column {
   display: flex;
   flex-direction: column;
