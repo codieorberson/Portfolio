@@ -67,7 +67,7 @@ export class SideProjectsComponent {
       name: "Stock Portfolio Manager",
       imageUrl: "/assets/images/stocks-project.jpg",
       technologies: ["Python Flask", "Angular"],
-      sourceCodeLink: "https://github.com/codieorberson/StocksService",
+      sourceCodeLink: "https://github.com/codieorberson/StocksService-Showcase",
       showDescription: false,
       detailsButtonText: "+ Details",
       year: "2023",
