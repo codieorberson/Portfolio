@@ -25,7 +25,13 @@ import { ChatDialogComponent } from './chat-dialog/chat-dialog.component';
 import { FormsModule } from '@angular/forms';
 
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { LottieComponent } from './lottie/lottie.component';
+import { LottieModule } from 'ngx-lottie';
+import { DynamicLottieComponent } from './dynamic-lottie/dynamic-lottie.component';
 
+export function playerFactory() {
+  return import('lottie-web');
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +47,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     CvComponent,
     ImageDialogComponent,
     WordCloudComponent,
-    ChatDialogComponent
+    ChatDialogComponent,
+    LottieComponent,
+    DynamicLottieComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +61,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatDialogModule,
     MatTooltipModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    LottieModule.forRoot({ player: playerFactory })
   ],
   providers: [],
   bootstrap: [AppComponent]

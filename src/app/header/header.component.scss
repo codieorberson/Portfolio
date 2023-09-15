@@ -17,6 +17,11 @@ header nav {
   }
 }
 
+nav a.active {
+  color: teal;
+}
+
+
 .center-links {
   display: flex;
   justify-content: center;

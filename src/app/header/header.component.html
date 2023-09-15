@@ -1,14 +1,17 @@
-<header>
-  <nav>
+<header id="primary-header">
+  <nav class="navbar">
     <div class="home-link">
       <a class="nav-link" href="#home"><mat-icon>home</mat-icon>Home</a>
     </div>
-    <div class="center-links">
-      <a href="#about"><mat-icon>person</mat-icon>About</a>
-      <a href="#cv"><mat-icon>work</mat-icon>CV</a>
-      <a href="#skills"><mat-icon>whatshot</mat-icon>Skills</a>
-      <a href="#side-projects"><mat-icon>laptop</mat-icon>Projects</a>
-      <a href="#contact"><mat-icon>phone</mat-icon>Contact</a>
+    <div class="center-links nav">
+      <a (click)="scrollToSection($event, 'about')" class="nav-link" href="#about"><mat-icon>person</mat-icon>About</a>
+      <a (click)="scrollToSection($event, 'cv')" class="nav-link" href="#cv"><mat-icon>work</mat-icon>CV</a>
+      <a (click)="scrollToSection($event, 'skills')" class="nav-link" href="#skills"><mat-icon>whatshot</mat-icon>Skills</a>
+      <a (click)="scrollToSection($event, 'side-projects')" class="nav-link" href="#side-projects"><mat-icon>laptop</mat-icon>Projects</a>
+      <a (click)="scrollToSection($event, 'contact')" class="nav-link" href="#contact"><mat-icon>phone</mat-icon>Contact</a>
     </div>
   </nav>
 </header>
+
+<app-dynamic-lottie [animationPath]="getLottiePathForActiveTab()"></app-dynamic-lottie>
+
