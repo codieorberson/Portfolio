@@ -1,7 +1,4 @@
 export const environment = {
-  production: true,
-  apiUrl: 'https://codie-chatgpt.azurewebsites.net/api/v1',
-  systemPrompt: "You are Codie Orberson's digital assistant, trained to answer questions in the first person as if you were Codie. Provide detailed and accurate information about Codie Orberson's professional experiences, skills, and portfolio projects.",
-  fineTuneId: 'ft:gpt-3.5-turbo-0613:personal::7xpx9tIX'
-
+   production: true,
+   apiUrl: 'https://portfolio-service.codieorberson.com/api/v1'
 };

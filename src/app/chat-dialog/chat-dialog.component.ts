@@ -101,9 +101,8 @@ export class ChatDialogComponent implements OnInit, OnDestroy {
 
       this.isLoading = true;
       this.chatgpt.GetAnswer(question).subscribe((response) => {
-        const contentMessage = response.message.choices[0].message.content;
-        console.log(contentMessage)
-        this.addMessages(contentMessage, true);
+        console.log(response);
+        this.addMessages(response, true);
 
         this.isLoading = false;
       });
