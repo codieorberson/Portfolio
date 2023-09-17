@@ -1,27 +1,27 @@
 <div class="skills-container" id="uniqueSkillsContainer">
   <h1><b>Skills</b></h1>
   <div class="grid-container">
-    <mat-card *ngFor="let skillCategory of allSkills; let i = index" [@slideIn]="getAnimationState(i)">
-      <mat-card-title>{{skillCategory.name}}</mat-card-title>
+    <mat-card *ngFor="let skillGroup  of groupedSkills; let i = index" [@slideIn]="getAnimationState(i)">
+      <mat-card-title>{{skillGroup.type}}</mat-card-title>
 
       <mat-card-content>
-        <div *ngFor="let skill of skillCategory.skills" class="progress-container">
+        <div *ngFor="let skill of skillGroup.skills" class="progress-container">
           <p>
-            {{skill.name}}
-            <span matTooltip={{skill.details}} matTooltipPosition="right" class="info-icon"    matTooltipClass="skills-tooltip">
+            {{skill.Name}}
+            <span matTooltip={{skill.Details}} matTooltipPosition="right" class="info-icon"    matTooltipClass="skills-tooltip">
               i
             </span>
-            <span class="experience-span">({{skill.yearsExperience}}+ years)</span>
+            <span class="experience-span">({{skill.YearsExperience}}+ years)</span>
 
 
           </p>
           <div class="progress-with-number">
-            <mat-progress-bar [value]="skill.progress"></mat-progress-bar>
-            <span class="progress-number">{{skill.progress}}%</span>
+            <mat-progress-bar [value]="skill.ProgressPercentage"></mat-progress-bar>
+            <span class="progress-number">{{skill.ProgressPercentage}}%</span>
           </div>
         </div>
       </mat-card-content>
     </mat-card>
   </div>
-  <app-word-cloud [skillsData]="flattenedSkills"></app-word-cloud>
+  <app-word-cloud *ngIf="skillsWordCloud?.length" [skillsData]="skillsWordCloud"></app-word-cloud>
 </div>
