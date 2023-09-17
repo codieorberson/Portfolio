@@ -1,4 +1,6 @@
 import { OnInit , Component } from '@angular/core';
+import { ProfileService } from '../services/profile.service';
+import { About } from '../models/About';
 
 @Component({
   selector: 'app-home-carousel',
@@ -6,7 +8,10 @@ import { OnInit , Component } from '@angular/core';
   styleUrls: ['./home-carousel.component.scss']
 })
 export class HomeCarouselComponent implements OnInit {
-  titles = ['Full-Stack', '.NET', 'Angular', 'Azure', 'SQL Server'];
+  constructor(private profileService: ProfileService) {}
+
+  titles = ['Azure', 'SQL Server']; //Default
+  fullName = "Codie Orberson";  //Default
   currentTitle = '';
   currentWordIndex = 0;
   typingIndex = 0;
@@ -21,10 +26,19 @@ export class HomeCarouselComponent implements OnInit {
   currentPictureIndex = 0;
 
   ngOnInit() {
+    this.loadAbout();
     setInterval(() => {
       this.currentPictureIndex = (this.currentPictureIndex + 1) % this.images.length;
     }, 3000);
     this.type();
+  }
+
+  loadAbout(): void{
+    this.profileService.GetAbout().subscribe(data => {
+      this.titles = data.Skills;
+      this.fullName = `${data.FirstName} ${data.LastName}`
+
+    });
   }
 
   type() {

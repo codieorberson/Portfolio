@@ -1,4 +1,4 @@
-<div class="about-container">
+<div class="about-container" *ngIf="about" >
   <h1><b>About</b></h1>
 
   <div class="content-container" >
@@ -20,32 +20,21 @@
     </div>
 
     <div class="description-section" [@slideInBottom]="isVisible ? '*' : 'void'">
-      <h2>Full Stack Developer</h2>
+      <h2>{{about.Title}}</h2>
       <p>
-        Full Stack developer specialized in .NET, SQL Server, Angular, and Azure.
-        Drawing from substantial experience in the healthcare sector,
-        excels at addressing technical challenges with precision.
-        Ambitious in using technical expertise to drive improvements in specific industries. Actively seeking a role in an innovative company to deploy impactful solutions for customers.
+        {{about.Summary}}
       </p>
 
     <div class="info-section">
       <div class="info-item">
         <mat-icon>location_on</mat-icon>
-        <span>Saint Louis, MO</span>
+        <span>{{about.Location}}</span>
       </div>
       <div class="info-item">
         <mat-icon>cake</mat-icon>
-        <span>26</span>
-      </div>
-      <!-- <div class="info-item">
-        <mat-icon>mail_outline</mat-icon>
-        <span>codie.orberson@gmail.com</span>
+        <span>{{about.Age}}</span>
       </div>
 
-      <div class="info-item">
-        <mat-icon>school</mat-icon>
-        <span>Bachelor's degree</span>
-      </div> -->
     </div>
   </div>
 </div>

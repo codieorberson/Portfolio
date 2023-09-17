@@ -35,50 +35,15 @@
 
     <div class="column" [@slideInBottom]="isVisible ? '*' : 'void'">
       <h2>Career</h2>
-      <div class="timeline-item">
+      <div class="timeline-item" *ngFor="let job of jobs">
         <div class="dot"></div>
-        <h3>Software Engineer</h3>
-        <p>Vizient Inc.</p>
-        <p class="year">2020-Present</p>
-        <button class="details-toggle" (click)="toggleSEDetails()">{{SEText}}</button>
-        <div class="details-content" *ngIf="showSEDetails">
+        <h3>{{ job.Position }}</h3>
+        <p>{{ job.Company }}</p>
+        <p class="year">{{ job.Years }}</p>
+        <button class="details-toggle" (click)="toggleDetails(job)">{{ job.ButtonText }}</button>
+        <div class="details-content" *ngIf="job.ShowDetails">
           <ul>
-              <li>Successfully refactored 4 .Net / Javascript legacy applications, leveraging Azure for centralized utilization, enhancing system efficiency</li>
-              <li>Migrated two services and a web application from PCF to Azure, demonstrating adaptability and technical proficiency</li>
-              <li>Spearheaded the migration of eight databases across three distinct 2014 Sql Servers to a high-availability Sql Server 2019 cluster. Now, steering the migration to Azure Sql Server</li>
-              <li>Expertly maintained a complex system of 9+ web applications, 15+ services, and 14+ NuGet packages, ensuring optimal performance and user satisfaction</li>
-              <li>Administered Single Sign-On Authentication via Okta for both internal and external users, enhancing user accessibility and experience</li>
-              <li>Collaborated effectively with Quality Engineer, Product Management, and Technical Operations to conceptualize, develop, test, and deploy cutting-edge software solutions</li>
-              <li>Ingeniously rewriting DbAmp’s functionality, enabling real-time synchronization of on-premise Salesforce data</li>
-              <li>Created Event-Driven Architecture (EDA) that utilizes CDC on DB tables, logging all events to an Azure Event Hub, and executing functionality based on specific events</li>
-          </ul>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="dot"></div>
-        <h3>Paraeducator</h3>
-        <p>Missouri State University Disability Resource Center</p>
-        <p class="year">2019-2020</p>
-        <button class="details-toggle" (click)="togglePEDetails()">{{PEText}}</button>
-        <div class="details-content" *ngIf="showPEDetails">
-          <ul>
-              <li>Engineered software that transcribes detailed graph information from pictures to assist visually infrared students</li>
-              <li>Implemented and facilitated reasonable academic adjustments for students with disabilities, enhancing their learning experience</li>
-              <li>Proficiently worked with Assistive Technologies, ensuring accessible learning resources for students with disabilities</li>
-          </ul>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="dot"></div>
-        <h3>Access Specialist Assistant</h3>
-        <p>Missouri State University Disability Resource Center</p>
-        <p class="year">2019-2020</p>
-        <button class="details-toggle" (click)="toggleASADetails()">{{ASAText}}</button>
-        <div class="details-content" *ngIf="showASADetails">
-          <ul>
-              <li>Engineered software that transcribes detailed graph information from pictures to assist visually infrared students</li>
-              <li>Implemented and facilitated reasonable academic adjustments for students with disabilities, enhancing their learning experience</li>
-              <li>Proficiently worked with Assistive Technologies, ensuring accessible learning resources for students with disabilities</li>
+            <li *ngFor="let detail of job.AllDetails">{{ detail }}</li>
           </ul>
         </div>
       </div>
@@ -87,64 +52,16 @@
     <div class="hobbies-column" [@slideInRight]="isVisible ? '*' : 'void'">
       <h2>Hobbies</h2>
 
-      <div class="hobby-item">
+      <div *ngFor="let category of Object.keys(groupedHobbies)" class="hobby-item">
         <div class="hobby-header">
-          <mat-icon>flight</mat-icon>
-          <h3>Trips</h3>
+          <mat-icon>{{groupedHobbies[category][0].MatIcon}}</mat-icon>
+          <h3>{{category}}</h3>
         </div>
-          <ul>
-              <li>Scotland</li>
-              <li>Vancouver</li>
-              <li>Grand Canyon</li>
-              <li>Yosemite</li>
-              <li>Zion</li>
-          </ul>
+        <ul>
+          <li *ngFor="let hobby of groupedHobbies[category]">{{hobby.Name}}</li>
+        </ul>
       </div>
-
-      <div class="hobby-item">
-        <div class="hobby-header">
-          <mat-icon>casino</mat-icon>
-          <h3>Board Games</h3>
-        </div>
-
-          <ul>
-              <li>Catan</li>
-              <li>Dominion</li>
-              <li>Texas Holdem</li>
-              <li>Azul</li>
-              <li>Ticket to Ride</li>
-          </ul>
-      </div>
-
-      <div class="hobby-item">
-        <div class="hobby-header">
-          <mat-icon>videogame_asset</mat-icon>
-          <h3>Video Games</h3>
-        </div>
-          <ul>
-              <li>Call of Duty</li>
-              <li>Halo</li>
-              <li>Beat Saber</li>
-              <li>Fortnite</li>
-              <li>Terraria</li>
-          </ul>
-      </div>
-
-      <div class="hobby-item">
-        <div class="hobby-header">
-          <mat-icon>sports_soccer</mat-icon>
-          <h3>Sports</h3>
-        </div>
-          <ul>
-              <li>Ultimate Frisbee</li>
-              <li>Basketball</li>
-              <li>Ping Pong</li>
-              <li>Pool</li>
-              <li>Pickle Ball</li>
-          </ul>
-      </div>
-
-  </div>
+    </div>
 
 
 
