@@ -1,0 +1,22 @@
+.close-button{
+  padding: 8px 16px;
+  background-color: #c04000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close-button:hover{
+  font-weight: bold;
+  color: black;
+}
+
+.custom-mat-dialog {
+  max-width: 600px !important;
+}
+
+body.cdk-global-scrollblock {
+  overflow: initial !important;
+}

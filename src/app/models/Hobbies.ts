@@ -1,4 +1,5 @@
-export interface Hobbies {
+export interface Hobbies
+{
   Category: string;
   Name: string;
   Description: string;

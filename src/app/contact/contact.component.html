@@ -1,12 +1,39 @@
 <div class="contact-container">
-  <h2>Contact Information</h2>
-  <div>
+  <h2>Contact</h2>
+  <div class="icon">
     <mat-icon>phone</mat-icon>
     <a [href]="'tel:' + telephone">Phone: {{telephone}}</a>
   </div>
-  <div>
+  <div class="icon">
     <mat-icon>email</mat-icon>
     <a [href]="'mailto:' + email">Email: {{email}}</a>
   </div>
 
+  <!-- Email Form -->
+  <mat-card class="email-form-card"  [@slideInBottom]="isVisible ? '*' : 'void'">
+    <mat-card-content>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email Address</mat-label>
+        <input matInput type="email" placeholder="Enter your email" [(ngModel)]="from">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Subject</mat-label>
+        <input matInput type="text" placeholder="Your Subject" [(ngModel)]="subject">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Message</mat-label>
+        <textarea class="message-box" matInput rows="4" placeholder="Your message..." [(ngModel)]="message"></textarea>
+    </mat-form-field>
+
+      <p class="instructions">
+        Please provide detailed information in your message. I'll get back to you as soon as possible.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="sendEmail()" [disabled]="!subject || !from || !message" mat-raised-button class="button send-button">Send</button>
+      <button (click)="clearForm()" mat-raised-button class="button clear-button">Clear</button>
+    </mat-card-actions>
+  </mat-card>
 </div>

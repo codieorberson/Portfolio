@@ -22,11 +22,14 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { WordCloudComponent } from './word-cloud/word-cloud.component';
 import { ChatDialogComponent } from './chat-dialog/chat-dialog.component';
 import { FormsModule } from '@angular/forms';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { LottieComponent } from './lottie/lottie.component';
 import { LottieModule } from 'ngx-lottie';
 import { DynamicLottieComponent } from './dynamic-lottie/dynamic-lottie.component';
+import { ThankYouDialogComponent } from './thank-you-dialog/thank-you-dialog.component';
 
 export function playerFactory() {
   return import('lottie-web');
@@ -47,7 +50,8 @@ export function playerFactory() {
     WordCloudComponent,
     ChatDialogComponent,
     LottieComponent,
-    DynamicLottieComponent
+    DynamicLottieComponent,
+    ThankYouDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +59,9 @@ export function playerFactory() {
     BrowserAnimationsModule,
     MatIconModule,
     MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
     MatProgressBarModule,
     MatDialogModule,
     MatTooltipModule,

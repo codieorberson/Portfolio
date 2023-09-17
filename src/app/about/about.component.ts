@@ -1,4 +1,4 @@
-import { Component, HostListener, ElementRef, OnInit } from '@angular/core';
+import { Component, HostListener, ElementRef } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { ProfileService } from '../services/profile.service';
 import { About } from '../models/About';
@@ -33,7 +33,7 @@ import { About } from '../models/About';
   ]
 })
 
-export class AboutComponent implements OnInit{
+export class AboutComponent{
   ngOnInit() {
     this.loadAbout();
     this.componentBottom = this.el.nativeElement.offsetTop + this.el.nativeElement.clientHeight;
