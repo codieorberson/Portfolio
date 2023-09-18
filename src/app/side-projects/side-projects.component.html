@@ -1,6 +1,6 @@
 <h1><b>Projects</b></h1>
 <div class="side-projects">
-  <div class="projects-container" *ngIf="shouldAnimate" [@slideIn]="activeProjects.length">
+  <div class="projects-container" *ngIf="shouldAnimate" [@slideIn]="activeProjects?.length">
     <mat-card *ngFor="let project of activeProjects" class="project-card">
       <a [href]="project.ImageUrl" target="_blank">
         <img mat-card-image src="{{project.ImageUrl}}" alt="{{project.Name}}" class="clickable-image">

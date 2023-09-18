@@ -12,7 +12,7 @@ export class EmailService {
   constructor(private httpClient: HttpClient) { }
 
   SendQuestion(message: EmailMessage) : Observable<boolean> {
-    const url = `${this.baseUrl}/Email/SendQuestion`;
+    const url = `${this.baseUrl}/api/v1/Email/SendQuestion`;
     return this.httpClient.post<boolean>(url, message);
   }
 }

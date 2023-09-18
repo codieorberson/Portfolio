@@ -30,8 +30,8 @@ export class SideProjectsComponent {
   ngOnInit(){
     this.loadAllProjects()
   }
-  allProjects: Projects[];
-  activeProjects: Projects[];
+  allProjects: Projects[] = [];
+  activeProjects: Projects[] = [];
   shouldAnimate = false;
   componentBottom: number;
 
@@ -46,7 +46,6 @@ export class SideProjectsComponent {
       this.shouldAnimate = true;
     } else {
       this.shouldAnimate = false;
-      this.activeProjects = [...this.activeProjects];
     }
   }
 
@@ -54,15 +53,23 @@ export class SideProjectsComponent {
   loadAllProjects(): void {
     this.profileService.GetAllProjects().subscribe(
       data => {
-        this.allProjects = data.map(project => ({
-          ...project,
-          showDescription: false,
-          detailsButtonText: "+ Details"
-        }));
-        this.activeProjects = this.allProjects.filter(x=>x.Active);
+        if (Array.isArray(data)) {
+          this.allProjects = data.map(project => ({
+            ...project,
+            showDescription: false,
+            detailsButtonText: "+ Details"
+          }));
+          this.activeProjects = this.allProjects.filter(x => x.Active);
+        } else {
+          console.error('Received non-array data:', data);
+        }
+      },
+      error => {
+        console.error('Error loading projects:', error);
       }
     );
   }
+
 
 
   goToSourceCode(link: string) {

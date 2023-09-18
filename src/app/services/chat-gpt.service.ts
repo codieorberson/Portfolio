@@ -11,7 +11,7 @@ export class ChatGptService {
   constructor(private httpClient: HttpClient) { }
 
   GetAnswer(question: string) : Observable<string> {
-    const url = `${this.baseUrl}/ChatGpt/GetFineTuneAnswer`;
+    const url = `${this.baseUrl}/api/v1/ChatGpt/GetFineTuneAnswer`;
     const httpOptions = {
       params: new HttpParams().set('question', question),
       responseType: 'text' as 'json'

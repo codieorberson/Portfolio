@@ -17,27 +17,27 @@ export class ProfileService {
   constructor(private httpClient: HttpClient) { }
 
   GetAllSkills() : Observable<Skills[]> {
-    const url = `${this.baseUrl}/Profile/GetAllSkills`;
+    const url = `${this.baseUrl}/api/v1/Profile/GetAllSkills`;
     return this.httpClient.get<Skills[]>(url);
   }
 
   GetAllProjects() : Observable<Projects[]> {
-    const url = `${this.baseUrl}/Profile/GetAllProjects`;
+    const url = `${this.baseUrl}/api/v1/Profile/GetAllProjects`;
     return this.httpClient.get<Projects[]>(url);
   }
 
   GetAllJobDetails() : Observable<JobDetails[]> {
-    const url = `${this.baseUrl}/Profile/GetAllJobDetails`;
+    const url = `${this.baseUrl}/api/v1/Profile/GetAllJobDetails`;
     return this.httpClient.get<JobDetails[]>(url);
   }
 
   GetAllHobbies() : Observable<Hobbies[]> {
-    const url = `${this.baseUrl}/Profile/GetAllHobbies`;
+    const url = `${this.baseUrl}/api/v1/Profile/GetAllHobbies`;
     return this.httpClient.get<Hobbies[]>(url);
   }
 
   GetAbout() : Observable<About> {
-    const url = `${this.baseUrl}/Profile/GetAbout`;
+    const url = `${this.baseUrl}/api/v1/Profile/GetAbout`;
     return this.httpClient.get<About>(url);
   }
 }
