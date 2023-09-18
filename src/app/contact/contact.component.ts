@@ -48,7 +48,7 @@ export class ContactComponent {
 
 
   telephone: string = '314-305-4647';
-  email: string = 'codie@codieorberson.com';
+  email: string = 'codieorberson@gmail.com';
   emailMessage: EmailMessage = {
     Subject: '',
     From: '',
